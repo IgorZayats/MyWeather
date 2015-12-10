@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Myweather</title>
+<link href="styles/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<audio id="music" autoplay preload="auto" volume="0,2" loop></audio>
+<header></header>
+<div id="weather">
+</div>
+<div class="weatherblock">
+    <table width="300" >
+    <tr>
+      <td id="weathericon"></td>
+    </tr>  
+    <tr>
+    <th colspan="2" id="date"></th>
+    </tr>
+    <tr>
+      <td>Температура</td>
+      <td><span id="temp"></span><span class="temp">С&deg;</span></td>
+    </tr>
+    <tr>
+      <td>Хмарність</td>
+      <td><span id="clouds"></span></td>
+    </tr>
+    <tr>
+      <td>Вологість повітря</td>
+      <td><span id="humidity"></span><span class="persent">%</span></td>
+    </tr>
+    <tr>
+      <td>Схід сонця</td>
+      <td><span id="sunrise"></span></td>
+    </tr>
+    <tr>
+      <td>Захід сонця</td>
+      <td><span id="sunset"></span></td>
+    </tr>
+    <tr>
+      <td>Тиск</td>
+      <td><span id="preasure"></span> <span class="preasure">мм рт.ст.</span></td>
+    </tr>
+</table>
+<div id="city"></div>
+</div>
+
+<a href="main.html" ><button title="Щоб дізнатись погоду на 16 днів та у інших містах натисніть кнопку На сайт" class="imgbutton">На сайт</button></a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/suncalc.js"></script>
+<script type="text/javascript" src="js/weatherfromservice.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+</body>
+</html>
