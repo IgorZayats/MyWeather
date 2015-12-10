@@ -1,0 +1,158 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/main.css" rel="stylesheet" type="text/css">
+<link href="styles/radio.css" rel="stylesheet" type="text/css">
+<title>MyWeather</title>
+
+</head>
+<header class="head">
+</header>
+
+<body class="body">
+<a href="index.html"><button class="button"><img class="imgbutton" src="icons/home.png" width="77" height="78" alt=""/></button></a>
+<button  id="menubutton" class="button"><img class="imgbutton"  src="icons/menu.png" width="77" height="78" alt=""/></button>
+<button  id="backgroundbutton" class="button"><img class="imgbutton"  src="icons/menu.png" width="77" height="78" alt=""/></button>
+<button  id="radio" class="button"><img class="imgbutton"  src="icons/menu.png" width="77" height="78" alt=""/></button>
+
+
+<div id="divlist"  class="divlist">
+<ul id="list">
+<li class="menu" id="sevendays">На 5 днів</li>
+<li class="menu" id="sixteenthdays">На 16 днів</li>
+</ul>
+</div>
+<div id="carousel" >
+   <img onClick="winter()" class="cloudcarousel" src="images/winter.jpg" width="150" height="100" alt="Winter" title="Зима" />   
+   <img onClick="autumn()" class="cloudcarousel" src="images/autumn.jpg" width="150" height="100" alt="Autumn" title="Осінь" />   
+    <img onClick="summer()" class="cloudcarousel" src="images/summer.jpg" width="150" height="100" alt="Summer" title="Літо" />   
+   <img onClick="spring()" class="cloudcarousel" src="images/spring.jpg" width="150" height="100" alt="Spring" title="Весна" />  
+  <img onClick="sea()" class="cloudcarousel" src="images/sea.jpg" width="150" height="100" alt="Sea" title="Море" /> 
+  <img onClick="forest()" class="cloudcarousel" src="images/forest.jpg" width="150" height="100" alt="Forest" title="Ліс" /> 
+<img onClick="lake()" class="cloudcarousel" src="images/lake.jpg" width="150" height="100" alt="Lake" title="Озеро" /> 
+
+    <h1 id="image_title"></h1>
+               <h2 id="image_alt" ></h2>   
+         </div><!-- #carousel -->      
+		 
+         
+  <table  id="radiotable" class="radiotable">
+    <tr>
+      <td><button id="roks" ><img src="icons/roks.jpg"  alt=""/></button></td>
+      <td id="roksname">Radio Roks</td>
+    </tr>
+    <tr >
+      <td colspan="2" height="20px"><audio id="player1"  controls></audio></td>
+    </tr>
+    <tr>
+      <td><button id="djfm" ><img src="icons/djfm.jpg"  alt=""/></button></td>
+      <td>DjFm</td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20px"><audio id="player2"  controls></audio></td>
+    </tr>
+    <tr>
+      <td><button id="renesans" ><img src="icons/renesans.jpg"  alt=""/></button>
+</td>
+      <td>Renesans</td>
+    </tr>
+    <tr>
+      <td  colspan="2" height="20px"><audio id="player3"  controls></audio></td>
+    </tr>
+    <tr>
+      <td><button id="sharmanka" ><img src="icons/sharmanka.jpg"  alt=""/></button>
+</td>
+      <td>Sharmanka</td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20px"><audio id="player4"  controls></audio></td>
+    </tr>
+    <tr>
+      <td><button id="transcentury" ><img src="icons/transcentury.jpg"  alt=""/></button></td>
+      <td>Trans Century Radio</td>
+    </tr>
+    <tr>
+      <td  colspan="2" height="20px"><audio id="player5"  controls></audio></td>
+    </tr>
+    <tr>
+      <td><button id="comafm" ><img src="icons/comafm.jpg"  alt=""/></button></td>
+      <td>Coma.fm</td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20px"><audio id="player6"  controls></audio></td>
+    </tr>
+    <tr>
+      <td><button id="prostoradio" ><img src="icons/prostoradio.jpg"  alt=""/></button></td>
+      <td>Prostoradio</td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20px"><audio id="player7"  controls></audio></td>
+    </tr>
+    <tr>
+      <td><button id="mfm" ><img src="icons/mfm.jpg"  alt=""/></button></td>
+      <td>Mfm</td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20px"><audio id="player8"  controls></audio></td>
+    </tr>
+    <tr>
+      <td><button id="kissfm" ><img src="icons/kissfm.png"  alt=""/></button></td>
+      <td>Kissfm</td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20px"><audio id="player9"  controls></audio></td>
+    </tr>
+</table> 
+<div id="allweather" style="display:none">
+<div id="blockweather16" style="display:none">
+<form id="formCity16" >
+            <label for="cityName16">Enter city name16:</label>
+            <input id="inputCityName16" type="text" name="cityName16"/>
+            <input type="button" id="btnGetWeather16" value="Показати погоду"/>
+</form>
+<div id="weather16" >   
+<table width="500" border="1" id="weatherTable16" >
+    <tr ><th>Дата</th><th>icon</th><th>Погода</th><th>Ранок</th><th>Обід</th><th>Вечір</th><th>ніч</th><th>Тиск</th>
+      </tr>
+</table>
+</div>
+</div>
+<div id="blockweather5" style="display:none">
+<form id="formCity5">
+            <label for="cityName5">Enter city name5:</label>
+            <input id="inputCityName5" type="text" name="cityName5"/>
+            <input type="button" id="btnGetWeather5" value="Показати погоду"/>
+</form>
+<div id="weather5">   
+<table width="500" border="1" id="weatherTable5">
+    <tr ><th>Дата</th><th>icon</th><th>Погода</th><th>Температура</th><th>Тиск</th><th>Вологість повітря</th>
+      </tr>
+</table>
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/cloud-carousel.1.0.5.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/sitedrive.js"></script>
+<script type="text/javascript" src="js/radio.js"></script>
+<script type="text/javascript" src="js/weatherByCity16.js"></script>
+<script type="text/javascript" src="js/weatherByCity5.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#carousel").CloudCarousel( { 
+			titleBox: $('#image_title'),
+			altBox: $('#image_alt'),
+			yRadius:90,
+            yRadius:80,
+			xPos: 192,
+			yPos: 10,
+			speed:0.15,
+			mouseWheel:true
+		});		
+	});
+</script>
+</body>
+</html>
