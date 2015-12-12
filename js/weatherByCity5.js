@@ -31,12 +31,11 @@ function getWeatherByCity5(lang, city) {
 
 
 
-
-
-
-
-function addWeather(date, icon, description, temp, pressure, humidity) {
-
+function getIconClass(icon) {
+     if (icon === '10d') {
+         return 'lightrain10d';
+     }
+  
     if (icon === "10d") {
         $('.icon').addClass('lightrain10d');
 
@@ -86,10 +85,17 @@ function addWeather(date, icon, description, temp, pressure, humidity) {
         alert(icon);
     }
 
+}
+
+
+
+function addWeather(date, icon, description, temp, pressure, humidity) {
+   
+   var className = getIconClass(icon);
 
     var weather =
         '<li>' + date +
-        '<div class="icon">' + icon + '</div>' +
+        '<div class="icon '+ className' + '" >'  + icon + '</div>' +
         '<p>Погода</p>' + description + '</p>' +
         '<p>Температура</p>' + temp +
         '<p>Тиск</p>' + pressure +
