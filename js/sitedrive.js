@@ -1,72 +1,48 @@
-﻿function winter () {
-$(document).ready(function(){
-        $("body").css('background-image','url(images/winter.jpg)');
-    });
-}
-function autumn () {
-$(document).ready(function(){
-        $("body").css('background-image','url(images/autumn.jpg)');
-    });
-}
-function spring () {
-$(document).ready(function(){
-        $("body").css('background-image','url(images/spring.jpg)' );
-    });
-}
+﻿   $(document).ready(function() {
+   $(".cloudcarousel").click(function() {
+     var pictureID = this.id;
+     $("body").css('background-image', 'url(images/' + pictureID + '.jpg)');
+   });
+ });
 
-function summer () {
-$(document).ready(function(){
-        $("body").css('background-image','url(images/summer.jpg)');
-    });
-}
+ $("#menubutton").click(function() {
+   $("#list").toggle("fast");
+ });
 
-function sea () {
-$(document).ready(function(){
-        $("body").css('background-image','url(images/sea.jpg)');
-    });
-}
+ $("#backgroundbutton").click(function() {
+   $("#carousel").toggle("fade");
+ });
+ $("#radio").click(function() {
+   $("#radiotable").fadeToggle("fast");
+ });
 
-function forest () {
-$(document).ready(function(){
-        $("body").css('background-image','url(images/forest.jpg)');
-    });
-}
+ $("#fivedays").click(function hide16() {
+   $("#weatherTable16 li").remove();
+   $("#city").empty();
+   $("#blockweather16").css('display', 'none');
+   $("#blockweather5").css('display', 'block');
+ });
 
-function lake () {
-$(document).ready(function(){
-        $("body").css('background-image','url(images/lake.jpg)');
-    });
-}
+ $("#sixteenthdays").click(function hide5() {
+   $("#weatherTable5 li").remove();
+   $("#city").empty();
+   $("#blockweather5").css('display', 'none');
+   $("#blockweather16").css('display', 'block');
+ });
 
-$( "#menubutton" ).click(function() {
-  $( "#list" ).toggle( "fast" );
-});
-
-$( "#backgroundbutton" ).click(function() {
-  $( "#carousel" ).toggle( "fast" );
-});
-$( "#radio" ).click(function() {
-  $( "#radiotable" ).fadeToggle( "fast" );
-});
-
-
-$( "#fivedays" ).click( function hide16 () {
-     $("#weatherTable16 li").remove();
-    $( "#blockweather16" ).css('display', 'none');
-    
-    $( "#blockweather5" ).css('display', 'block');
-   
-});
-
-$( "#sixteenthdays" ).click( function hide5 () {
+ $("#menubutton").click(function showAllweather() {
+   $("#allweather").toggle('fade', function remove() {
      $("#weatherTable5 li").remove();
-    $( "#blockweather5" ).css('display', 'none');
-    $( "#blockweather16").css('display', 'block');
-});
+     $("#weatherTable5 li").remove();
+   });
+ });
 
-$( "#menubutton" ).click( function showAllweather () {
-    $( "#allweather" ).toggle('fast', function remove () {
-    $("#weatherTable5 li").remove();
-    $("#weatherTable5 li").remove();
-    });
-    });
+ $("#fivedays").click(function pressedButton() {
+   $("#sixteenthdays").removeClass("menu16-press");
+   $("#fivedays").addClass("menu5-press");
+ });
+
+ $("#sixteenthdays").click(function pressedButton() {
+   $("#fivedays").removeClass("menu5-press");
+   $("#sixteenthdays").addClass("menu16-press");
+ });
