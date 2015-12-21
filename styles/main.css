@@ -21,6 +21,7 @@ body {
 }
 .img {
     height: 200px;
+    width-max: 100%;
     float: left;
     position: relative;
     border-radius: 10px;
@@ -37,6 +38,7 @@ ul {
     margin-left: 80px;
     width: 250px;
     height: 250px;
+    float: left;
 }
 #list {
     display: none;
@@ -50,6 +52,7 @@ ul {
     width: 72px;
     height: 72px;
     margin-bottom: 2px;
+    float: left;
     margin-top: 110px;
     border: 3px solid gray;
     border-radius: 50%;
@@ -63,6 +66,7 @@ ul {
     width: 72px;
     height: 72px;
     margin-bottom: 2px;
+    float: left;
     margin-top: 110px;
     border: 3px solid gray;
     border-radius: 50%;
@@ -76,6 +80,7 @@ ul {
     width: 72px;
     height: 72px;
     margin-bottom: 2px;
+    float: left;
     margin-top: 110px;
     border: 3px solid gray;
     border-radius: 50%;
@@ -85,10 +90,12 @@ ul {
     display: inline-block;
     background-image: url(../images/16day-animated.png);
     background-size: contain;
+    ;
     background-repeat: no-repeat;
     width: 72px;
     height: 72px;
     margin-bottom: 2px;
+    float: left;
     margin-top: 110px;
     border: 3px solid gray;
     border-radius: 50%;
