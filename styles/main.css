@@ -33,7 +33,7 @@ ul {
     float: left;
 }
 .divlist {
-    display: inline-block;
+    display: block;
     margin-top: -300px;
     margin-left: 80px;
     width: 250px;
@@ -45,7 +45,7 @@ ul {
 }
 .menu5 {
     margin-left: -30px;
-    display: inline-block;
+    display: block;
     background-image: url(../images/5days-notanimated.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -59,7 +59,7 @@ ul {
 }
 .menu16 {
     margin-left: 10px;
-    display: inline-block;
+    display: block;
     background-image: url(../images/16day-not-animated.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -73,7 +73,7 @@ ul {
 }
 .menu5-press {
     margin-left: -30px;
-    display: inline-block;
+    display: block;
     background-image: url(../images/5days-animated.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -87,10 +87,9 @@ ul {
 }
 .menu16-press {
     margin-left: 10px;
-    display: inline-block;
+    display: block;
     background-image: url(../images/16day-animated.png);
     background-size: contain;
-    ;
     background-repeat: no-repeat;
     width: 72px;
     height: 72px;
