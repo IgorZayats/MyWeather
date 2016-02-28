@@ -1,4 +1,4 @@
-﻿$.getJSON('http://api.dirble.com/v2/countries/UA/stations?token=1a5bbb2b353d24cee111924ea0',
+﻿$.getJSON('http://api.dirble.com/v2/countries/UA/stations?token=e6b3c80d6622d34b94136401fc',
     function(response) {
         $("#roks").on("click", function roks() {
             var stream = response[13].streams[0].stream;
