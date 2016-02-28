@@ -1,7 +1,7 @@
 ﻿$.getJSON('http://api.dirble.com/v2/countries/UA/stations?token=e6b3c80d6622d34b94136401fc',
     function(response) {
         $("#roks").on("click", function roks() {
-            var stream = response[13].streams[0].stream;
+            var stream = response[19].streams[0].stream;
             $("#player1").toggle('fast');
             $("#player1").css('display', 'block');
             $("#player1").append("<source src=" + stream + "></source>");
