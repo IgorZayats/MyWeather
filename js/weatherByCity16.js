@@ -13,7 +13,7 @@ $('#inputCityName16').keypress(function(e) {
 
 function getWeatherByCity16(lang, city) {
     $.getJSON(
-        'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city + '&APPID=dbc17aa6bb523a5c1c79a2b1db16857e&cnt=16&units=metric&lang=' + lang + '&callback=?',
+        'https://api.openweathermap.org/data/2.5/forecast/daily?q=' + city + '&APPID=dbc17aa6bb523a5c1c79a2b1db16857e&cnt=16&units=metric&lang=' + lang + '&callback=?',
         function(data) {
             var city = data.city.name + "," + data.city.country;
             $('#city').html(city);
