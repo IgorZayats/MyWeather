@@ -7,7 +7,7 @@ function getWeatherData() {
 
   function locSuccess(position) {
     $.getJSON(
-      'https://api.openweathermap.org/data/3.0/onecall?lat=' + position.coords.latitude + '&lon=' +
+      'https://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude + '&lon=' +
       position.coords.longitude + '&units=metric&APPID=dbc17aa6bb523a5c1c79a2b1db16857e' + '&lang=uk' + '&callback=?',
       function(response) {
         if (response.weather[0].icon === "10d") {
